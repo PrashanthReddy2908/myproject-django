@@ -15,3 +15,9 @@ def dynamicResponse(request):
     name=request.GET.get("name",'')
     city=request.GET.get("city",'')
     return HttpResponse(f"Hello {name} from {city}")
+
+def info(request):
+    name=request.GET.get("name","")
+    address=request.GET.get("address","")
+    age=request.GET.get("age","")
+    return HttpResponse(f"{name} from {address} and {age} years old")
