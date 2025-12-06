@@ -16,10 +16,7 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from basic.views import sample
-from basic.views import sample1
-from basic.views import sampleinfo
-from basic.views import dynamicResponse, info
+from basic.views import sample,sample1,sampleinfo,dynamicResponse,info,health,addStudent
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -28,4 +25,6 @@ urlpatterns = [
     path('data/',sampleinfo),
     path('dynamic/',dynamicResponse),
     path('sampleinfo/',info),
+    path('health/',health),
+    path('student/',addStudent)
 ]
